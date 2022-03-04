@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\PublisherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,5 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [UserController::class, 'findAll']);
+Route::get('/books', [BookController::class, 'findAll']);
+Route::get('/publishers', [PublisherController::class, 'findAll']);
