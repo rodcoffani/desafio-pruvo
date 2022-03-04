@@ -18,10 +18,11 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
+            'id' => $this->faker->uuid(),
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password            
-            'phone_number' => $this->faker->phoneNumber(),
+            'phone_number' => $this->faker->tollFreePhoneNumber(),
             'address' => $this->faker->address(),
             'birthday' => $this->faker->dateTime()
         ];
